@@ -1,0 +1,314 @@
+// .contain {
+//   display: grid;
+//   height: 95vh;
+//   grid-template-columns: 400px 1fr;
+//   .booking-confirmation {
+//     background: linear-gradient(to bottom, #e0f7ff, #fff);/* 渐变的背景色 */
+//     padding: 20px;
+//     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+//     transition: box-shadow 0.3s;
+//     overflow-y: auto;/* 允许垂直滚动 */
+//     &:hover {
+//       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+//     }
+//     /* 对 Webkit 浏览器（如 Chrome 和 Safari） */
+//     &::-webkit-scrollbar {
+//       width: 8px;
+//     }
+//     .flight-info {
+//       margin-bottom: 15px;
+//       padding: 10px;
+//       background: linear-gradient(to bottom, #87CEEB, #fff);/* 渐变的背景色 */
+//       border: 1px solid #ddd;
+//       border-radius: 15px;
+//       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//       transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+//       &:hover {
+//         transform: translateY(-5px); /* 悬停时上移 10px */
+//         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+//       }
+//     }
+//   }
+//   .chat-container {
+//     display: flex;
+//     flex-direction: column;
+//     // overflow: hidden;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//     margin-left: 5px;
+//     // height: 100vh;
+//     .chat-header {
+//       background: linear-gradient(to bottom, #4169E1, #87CEEB);
+//       border-radius: 10px;
+//       text-align: center;
+//       font-size: 1.2em;
+//     }
+//     .chat-body {
+//       margin-top: 10px;
+//       border: 1px solid #e0e0e0;
+//       border-radius: 8px;
+//       flex: 1;
+//       overflow-y: auto;
+//       .chat-message {
+//         display: flex;
+//         flex-direction: column;
+//         // align-items: center;
+//         margin-bottom: 15px;
+//         // justify-content: flex-end;
+//       }
+//     }
+//     .chat-footer {
+//       display: flex;
+//       // padding: 7px;
+//       background-color: white;
+//       align-items: center;
+//       // border-top: 1px solid #ccc;
+//       margin: 10px 2px 10px 5px;
+//       position: relative;
+//       input {
+//         flex: 1;
+//         margin-right: 5px;
+//         outline: none;
+//         border: 1px solid #ccc;
+//         padding: 10px;
+//         border-radius: 4px;
+//         transition: border-color 0.3s;
+//         &:focus {
+//           border-color: #4169E1;
+//         }
+//       }
+//       button {
+//         background-color: #6f7dff;
+//         color: white;
+//         border: none;
+//         border-radius: 4px;
+//         padding: 10px 20px;
+//         cursor: pointer;
+//         transition: background-color 0.3s;
+//         &:hover {
+//         background-color: #5a6bc0; /* 鼠标悬停时的颜色 */
+//         }
+//       }
+//     }
+//   }
+// }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.contain {
+  display: grid;
+  height: 100vh;
+  // 修改为三列布局
+  grid-template-columns: 350px 1fr 1fr; 
+  gap: 0 6px; 
+  .booking-confirmation {
+    background: linear-gradient(to bottom, #e0f7ff, #fff);/* 渐变的背景色 */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    overflow-y: auto;/* 允许垂直滚动 */
+    &:hover {
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+    }
+    /* 对 Webkit 浏览器（如 Chrome 和 Safari） */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    .flight-info {
+      margin-bottom: 15px;
+      padding: 10px;
+      background: linear-gradient(to bottom, #87CEEB, #fff);/* 渐变的背景色 */
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      &:hover {
+        transform: translateY(-5px); /* 悬停时上移 10px */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    // overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    // margin-left: 5px;
+    // height: 100vh;
+    height: 100%; 
+    .chat-header {
+      background: linear-gradient(to bottom, #4169E1, #87CEEB);
+      border-radius: 10px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+    .chat-body {
+      margin-top: 10px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      flex: 1;
+      overflow-y: auto;
+      padding: 2rem;
+      // .chat-message {
+      //   display: flex;
+      //   flex-direction: column;
+      //   position: relative;
+      //   // align-items: center;
+      //   // margin-bottom: 15px;
+      //   // justify-content: flex-end;
+      //   .user-message {
+      //     // align-self: flex-end;
+      //     margin-bottom: 1rem;
+      //     position: absolute;
+      //     right: 1rem;
+      //     // width: 300px;
+      //     background-color: #6f7dff;
+      //     color: white;
+      //     border-radius: 15px 15px 0 15px;
+      //     padding: 10px;
+      //     max-width: 70%;
+      //     word-wrap: break-word;
+      //   }
+      //   .bot-message {
+      //     // align-self: flex-start;
+      //     margin-bottom: 1rem;
+      //     position: absolute;
+      //     left: 1rem;
+      //     background-color: #e0f7ff;
+      //     color: black;
+      //     border-radius: 15px 15px 15px 0;
+      //     padding: 10px;
+      //     max-width: 70%;
+      //     word-wrap: break-word;
+      //   }
+      // }
+      .chat-message {
+        display: flex;
+        // flex-direction: row; // 修改为水平布局
+        // align-items: flex-start;
+        position: relative;
+        margin-bottom: 15px; // 添加底部边距
+        letter-spacing: 0.6px;
+        line-height: 2;
+        .avatar {
+          background-color: #000000;
+          color: white;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          display: flex; // 使头像内容居中
+          align-items: center; // 垂直居中
+          justify-content: center; // 水平居中
+        }
+
+        .user-avator {
+          margin-left: 10px;
+          // align-self: flex-end;
+        }
+
+        .bot-avator {
+          margin-right: 10px;
+        }
+
+        .user-message {
+          align-self: flex-end; // 用户消息靠右
+          margin-bottom: 0.5rem; // 用户消息与下方消息的间距
+          background-color: #4169E1;
+          color: white;
+          border-radius: 15px 5px 15px 15px;
+          padding: 10px;
+          max-width: 70%;
+          word-wrap: break-word;
+        }
+      
+        .bot-message {
+          align-self: flex-start; // 机器人消息靠左
+          margin-bottom: 0.5rem; // 机器人消息与下方消息的间距
+          background-color: #f0f4ff; /* 背景颜色 */
+          // background-color: #e0f7ff;
+          color: black;
+          border-radius: 5px 15px 15px 15px;
+          padding: 10px;
+          max-width: 70%;
+          word-wrap: break-word;
+        }
+
+        .think-message {
+          width: 140px;
+          position: relative;
+          background-color: #f0f4ff;
+          color: #575757; 
+          border-radius: 10px;
+          padding: 15px;
+          margin-bottom: 1rem;
+          max-width: 90%;
+          word-wrap: break-word;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          .collapsed-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        .think-content {
+          color: #575757;
+          padding: 15px;
+          margin-top: 0.5rem;
+          max-width: 90%;
+          margin: 1rem 0;
+          text-align: left;
+          font-size: 1.1rem;
+          border-left:#aea9a9 1px solid;
+        }
+      }
+      .chat-message.user {
+        flex-direction: row-reverse;
+      }
+      .chat-message.bot {
+        flex-direction: row;
+      }
+    }
+    .chat-footer {
+      display: flex;
+      background-color: white;
+      align-items: center;
+      margin: 10px 2px 10px 5px;
+      position: relative;
+      input {
+        flex: 1;
+        margin-right: 5px;
+        outline: none;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+        transition: border-color 0.3s;
+        &:focus {
+          border-color: #4169E1;
+        }
+      }
+      button {
+        background-color: #6f7dff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: #5a6bc0; /* 鼠标悬停时的颜色 */
+        }
+      }
+    }
+  }
+  // 添加右侧的对话框容器
+  .chat-container-right {
+    @extend .chat-container;
+    .chat-message {
+      flex-direction: column;
+    }
+  }
+}
