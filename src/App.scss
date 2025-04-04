@@ -92,7 +92,8 @@
 //   }
 // }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -101,14 +102,14 @@ html, body {
   display: grid;
   height: 100vh;
   // 修改为三列布局
-  grid-template-columns: 350px 1fr 1fr; 
-  gap: 0 6px; 
+  grid-template-columns: 350px 1fr 1fr;
+  gap: 0 6px;
   .booking-confirmation {
-    background: linear-gradient(to bottom, #e0f7ff, #fff);/* 渐变的背景色 */
+    background: linear-gradient(to bottom, #e0f7ff, #fff); /* 渐变的背景色 */
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
-    overflow-y: auto;/* 允许垂直滚动 */
+    overflow-y: auto; /* 允许垂直滚动 */
     &:hover {
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
     }
@@ -119,11 +120,14 @@ html, body {
     .flight-info {
       margin-bottom: 15px;
       padding: 10px;
-      background: linear-gradient(to bottom, #87CEEB, #fff);/* 渐变的背景色 */
+      background: linear-gradient(to bottom, #87ceeb, #fff); /* 渐变的背景色 */
       border: 1px solid #ddd;
       border-radius: 15px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
       &:hover {
         transform: translateY(-5px); /* 悬停时上移 10px */
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -137,9 +141,9 @@ html, body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     // margin-left: 5px;
     // height: 100vh;
-    height: 100%; 
+    height: 100%;
     .chat-header {
-      background: linear-gradient(to bottom, #4169E1, #87CEEB);
+      background: linear-gradient(to bottom, #4169e1, #87ceeb);
       border-radius: 10px;
       text-align: center;
       font-size: 1.2em;
@@ -215,14 +219,14 @@ html, body {
         .user-message {
           align-self: flex-end; // 用户消息靠右
           margin-bottom: 0.5rem; // 用户消息与下方消息的间距
-          background-color: #4169E1;
+          background-color: #4169e1;
           color: white;
           border-radius: 15px 5px 15px 15px;
           padding: 10px;
           max-width: 70%;
           word-wrap: break-word;
         }
-      
+
         .bot-message {
           align-self: flex-start; // 机器人消息靠左
           margin-bottom: 0.5rem; // 机器人消息与下方消息的间距
@@ -239,7 +243,7 @@ html, body {
           width: 140px;
           position: relative;
           background-color: #f0f4ff;
-          color: #575757; 
+          color: #575757;
           border-radius: 10px;
           padding: 15px;
           margin-bottom: 1rem;
@@ -262,7 +266,7 @@ html, body {
           margin: 1rem 0;
           text-align: left;
           font-size: 1.1rem;
-          border-left:#aea9a9 1px solid;
+          border-left: #aea9a9 1px solid;
         }
       }
       .chat-message.user {
@@ -287,7 +291,7 @@ html, body {
         border-radius: 4px;
         transition: border-color 0.3s;
         &:focus {
-          border-color: #4169E1;
+          border-color: #4169e1;
         }
       }
       button {

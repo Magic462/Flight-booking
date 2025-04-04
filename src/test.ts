@@ -41,45 +41,45 @@
 // solution(testStr3);
 
 function solution(str: string): string[] | string {
-    let leftCount = 0;
-    const result: string[] = [];
-    let current = '';
+  let leftCount = 0;
+  const result: string[] = [];
+  let current = '';
 
-    for (const char of str) {
-        if (char === '(') {
-            leftCount++;
-            if (leftCount === 1) {
-                if (current) {
-                    result.push(current);
-                    current = '';
-                }
-            } else {
-                current += char;
-            }
-        } else if (char === ')') {
-            if (leftCount === 0) {
-                return 'error';
-            }
-            leftCount--;
-            if (leftCount === 0) {
-                result.push(current);
-                current = '';
-            } else {
-                current += char;
-            }
-        } else {
-            current += char;
+  for (const char of str) {
+    if (char === '(') {
+      leftCount++;
+      if (leftCount === 1) {
+        if (current) {
+          result.push(current);
+          current = '';
         }
-    }
-
-    if (leftCount !== 0) {
+      } else {
+        current += char;
+      }
+    } else if (char === ')') {
+      if (leftCount === 0) {
         return 'error';
-    }
-
-    if (current) {
+      }
+      leftCount--;
+      if (leftCount === 0) {
         result.push(current);
+        current = '';
+      } else {
+        current += char;
+      }
+    } else {
+      current += char;
     }
+  }
 
-    return result.filter(item => item !== '');
+  if (leftCount !== 0) {
+    return 'error';
+  }
+
+  if (current) {
+    result.push(current);
+  }
+
+  return result.filter((item) => item !== '');
 }
-console.log(solution("(2+3)+(3 * 4)+2"));
+console.log(solution('(2+3)+(3 * 4)+2'));
